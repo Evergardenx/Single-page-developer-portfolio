@@ -1,0 +1,42 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.229rem;
+    line-height: 2.6rem;
+    padding-bottom: 1rem;
+
+    /* only for the .btn itself */
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+
+    /* Put transition on the original "state" */
+    @include transition;
+  }
+
+  &--green:link,
+  &--green:visited {
+    @include btn-link;
+  }
+
+  &--green:hover,
+  &--green:active {
+    @include btn-hover;
+  }
+
+  &--form {
+    @include btn-link;
+    background-color: transparent;
+  }
+
+  &--form:hover,
+  &--form:active {
+    @include btn-hover;
+  }
+}

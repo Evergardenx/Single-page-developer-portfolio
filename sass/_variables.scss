@@ -1,0 +1,71 @@
+// COLORS
+$clr-deep-black: #{"hsla(0,0%,0%, .75)"};
+$clr-black: #{"hsl(0,0%,8%)"};
+
+$clr-grey: #{"hsl(0,0%,85%)"};
+$clr-dark-grey: #{"hsl(0,0%,14%)"};
+
+$clr-error: #{"hsl(7,100%,68%)"};
+$clr-green: #{"hsl(153,71%,59%)"};
+$clr-white: #{"hsl(0,0%,100%)"};
+$clr-white-lowop: #{"hsla(0,0%,100%, .5)"};
+
+// FONTS
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+// MIXINS
+
+@mixin grid {
+  grid-template-columns:
+    [full-start] minmax(1.6rem, 1fr) [center-start] repeat(
+      12,
+      [col-start] minmax(min-content, 9.25rem) [col-end]
+    )
+    [center-end] minmax(1.6rem, 1fr) [full-end];
+
+  @media only screen and (min-width: $bp-tab) {
+    grid-template-columns:
+      [full-start] minmax(3rem, 1fr) [center-start] repeat(
+        12,
+        [col-start] minmax(min-content, 9.25rem) [col-end]
+      )
+      [center-end] minmax(3rem, 1fr) [full-end];
+  }
+}
+
+@mixin center-start {
+  grid-column: center-start / center-end;
+}
+
+@mixin btn-link {
+  color: $clr-white;
+  border-bottom: 2px solid $clr-green;
+}
+
+@mixin btn-hover {
+  color: $clr-green;
+}
+
+@mixin transition {
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+}
+
+// RESPONSIVE BREAKPOINTS
+$bp-iphone-se: 23em; //374.88px iPhone and above
+$bp-tab: 42em; // 672px small tablets
+$bp-tabb: 48.5em; // 776px slightly bigger ipads
+$bp-tabbb: 50.5em; // 808px slightly bigger ipads
+$bp-tabbb-pro: 51em; // 816px slightly bigger ipads
+$bp-tabbb-prop: 52em; // 832px newew iPad Pro
+$bp-spro: 57em; // 912px newew iPad Pro
+$bp-ipad-pro: 63.5em; // 1024px big iPads
+$bp-mb-pro: 79.5em; // 1272px MacBook Pro 13
+$bp-bigger-laptop: 89.5em; // 1432px MacBook Pro 13
+$bp-higher-res: 104.5em; // 1672px MacBook Pro 13
+$bp-full-hd: 119em; // 1920px FUll HD
+$bp-4k: 160em; // 2560px 4k

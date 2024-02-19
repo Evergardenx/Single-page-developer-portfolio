@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%; // 10px /16px = 62.5% -> 1rem = 10px
+}
+
+body {
+  min-height: 100vh;
+}
+
+.body-wrapper {
+  background-color: $clr-black;
+  background-image: url(/assets/images/pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-position: 84vw 67.5vw;
+
+  display: grid;
+  @include grid;
+
+  // column-gap: 3rem;
+
+  position: relative;
+  overflow-x: hidden;
+
+  @media only screen and (min-width: $bp-tab) {
+    background-image: none;
+  }
+}
+
+.main {
+  @include center-start;
+  display: grid;
+  grid-template-rows: min-content;
+  row-gap: 8rem;
+  padding-bottom: 8rem;
+
+  @media only screen and (min-width: $bp-ipad-pro) {
+    row-gap: 9.032rem;
+    padding-bottom: 13.9rem;
+  }
+
+  @media only screen and (min-width: $bp-mb-pro) {
+    row-gap: 9.244rem;
+  }
+  @media only screen and (min-width: $bp-bigger-laptop) {
+    row-gap: 10.4rem;
+  }
+}

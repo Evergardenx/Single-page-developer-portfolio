@@ -1,0 +1,244 @@
+.footer {
+  grid-column: full-start / full-end;
+  background-color: $clr-dark-grey;
+  padding: 6rem 0;
+
+  display: grid;
+  @include grid;
+  row-gap: 8.7rem;
+  position: relative;
+
+  @media only screen and (min-width: $bp-ipad-pro) {
+    padding: 8.4rem 0;
+    row-gap: 9.2rem;
+  }
+
+  &::before {
+    position: absolute;
+    // z-index: -1;
+    content: url(../assets/images/pattern-rings.svg);
+    bottom: 25.5rem;
+    right: 50vw;
+    z-index: 0;
+
+    @media only screen and (min-width: $bp-tab) {
+      bottom: 15.7rem;
+      right: 77.5vw;
+    }
+    @media only screen and (min-width: $bp-ipad-pro) {
+      bottom: 21.9rem;
+      right: 81.5vw;
+    }
+    @media only screen and (min-width: $bp-mb-pro) {
+      bottom: 19.9rem;
+      right: 80.7vw;
+    }
+    @media only screen and (min-width: $bp-bigger-laptop) {
+      right: 77.43vw;
+    }
+    @media only screen and (min-width: $bp-higher-res) {
+      right: 73.5vw;
+    }
+    @media only screen and (min-width: $bp-full-hd) {
+      right: 70vw;
+    }
+    @media only screen and (min-width: $bp-4k) {
+      right: 65.25vw;
+    }
+  }
+
+  &__logo-box {
+    @include center-start;
+    border-top: 1px solid $clr-white;
+    padding-top: 3.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 2rem;
+
+    @media only screen and (min-width: $bp-tab) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo:link,
+  &__logo:visited {
+    color: $clr-white;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 3.2rem;
+    letter-spacing: -0.033rem;
+    @include transition;
+
+    @media only screen and (min-width: $bp-tab) {
+      font-size: 3.2rem;
+      letter-spacing: -0.044rem;
+    }
+  }
+
+  &__logo:hover,
+  &__logo:active {
+    color: $clr-green;
+  }
+
+  &__social-box {
+    display: flex;
+    align-items: center;
+    gap: 2.467rem;
+  }
+
+  &__social-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  &__social-svg {
+    width: 2rem;
+    height: 2rem;
+
+    @media only screen and (min-width: $bp-tab) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+
+  &__social-logo {
+    // height: 1.92rem;
+    @include transition;
+  }
+
+  &__social-link:hover .footer__social-svg .footer__social-logo,
+  &__social-link:active .footer__social-svg .footer__social-logo {
+    fill: $clr-green;
+  }
+}
+
+.form {
+  @include center-start;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5rem;
+  overflow-x: hidden;
+
+  @media only screen and (min-width: $bp-tab) {
+    width: 60.49%;
+    transform: translateX(33%);
+  }
+  @media only screen and (min-width: $bp-ipad-pro) {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    transform: translateX(0);
+    gap: 11rem;
+  }
+  @media only screen and (min-width: $bp-mb-pro) {
+    gap: 22rem;
+  }
+
+  &__heading-box {
+    @media only screen and (min-width: $bp-ipad-pro) {
+      text-align: left;
+    }
+  }
+
+  &__group {
+    position: relative;
+  }
+
+  &__group.success &__input {
+    border-bottom: 1px solid $clr-green;
+  }
+
+  &__group.error &__input {
+    border-bottom: 1px solid $clr-error;
+  }
+
+  &__group.error &__small {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__input {
+    font-size: 1.6rem;
+    font-family: inherit;
+    font-weight: 500;
+    text-transform: uppercase;
+    // line-height: 2.6;
+
+    color: $clr-white;
+    padding: 0.7rem 1.6rem 1.4rem 2.4rem;
+    border-radius: 2px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $clr-white;
+    width: 89.5%;
+    display: block;
+    @include transition;
+
+    @media only screen and (min-width: $bp-ipad-pro) {
+      width: 90.5%;
+    }
+
+    &:focus {
+      outline: none;
+      // box-shadow: 0 1rem 2rem rgba($color-black, .1);
+      // border-bottom: 3px solid $color-primary;
+    }
+
+    &::placeholder {
+      color: $clr-white-lowop;
+      letter-spacing: -0.22px;
+    }
+  }
+
+  &__label {
+    color: $clr-white-lowop;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.6rem;
+    letter-spacing: 0.1rem;
+    display: block;
+    @include transition;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4.4rem);
+  }
+
+  &__small {
+    color: $clr-error;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    position: absolute;
+    right: 0;
+    bottom: 1.1rem;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+    @include transition;
+
+    &::before {
+      content: "!";
+      position: absolute;
+      width: 2.4rem;
+      height: 2.4rem;
+
+      font-size: 1.5rem;
+
+      border-radius: 50%;
+      outline: 1px solid currentColor;
+      right: 1px;
+      top: -4.5rem;
+      /* transform: translate(-50%, -50%); */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

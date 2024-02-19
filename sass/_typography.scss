@@ -1,0 +1,95 @@
+body {
+  color: $clr-grey;
+  font-family: "SpaceGrotesk", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+
+  @media only screen and (min-width: $bp-tab) {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary,
+.projects-title,
+.form__heading {
+  color: $clr-white;
+  font-weight: 700;
+}
+
+.heading-primary,
+.projects-title,
+.form__heading {
+  font-size: 4rem;
+  letter-spacing: -0.114rem;
+  line-height: 1;
+  margin-bottom: 2.4rem;
+  // text-align: center;
+
+  @media only screen and (min-width: $bp-tab) {
+    font-size: 7.2rem;
+    letter-spacing: -0.205rem;
+    margin-bottom: 7.7rem;
+    line-height: 1.08;
+  }
+  @media only screen and (min-width: $bp-ipad-pro) {
+    font-size: 7.64rem;
+    letter-spacing: -0.25rem;
+    margin-bottom: 3.73rem;
+    line-height: 1;
+  }
+
+  @media only screen and (min-width: $bp-mb-pro) {
+    font-size: 7.822rem;
+  }
+
+  @media only screen and (min-width: $bp-bigger-laptop) {
+    font-size: 8.8rem;
+    margin-bottom: 4.2rem;
+  }
+}
+
+.projects-title {
+  margin-bottom: 0;
+}
+
+.form__heading {
+  margin-bottom: 2rem;
+}
+
+.projects-title,
+.form__heading {
+  @media only screen and (min-width: $bp-tab) {
+    line-height: 1;
+  }
+}
+
+.heading-secondary {
+  font-size: 3.2rem;
+  letter-spacing: -0.1rem;
+  line-height: 4rem;
+
+  @media only screen and (min-width: $bp-tab) {
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  text-transform: uppercase;
+}
+
+.underline {
+  &,
+  &:link,
+  &:active {
+    border-bottom: 4px solid $clr-green;
+    color: currentColor;
+    text-decoration: none;
+  }
+}

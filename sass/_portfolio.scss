@@ -1,0 +1,382 @@
+.section-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  // text-align: center;
+  position: relative;
+
+  &::before {
+    content: url(../assets/images/pattern-rings.svg);
+    position: absolute;
+    top: 12.4rem;
+    right: 50vw;
+    z-index: 0;
+
+    @media only screen and (min-width: $bp-tabbb) {
+      top: 7.5rem;
+      right: 64vw;
+    }
+    @media only screen and (min-width: $bp-ipad-pro) {
+      top: 7rem;
+      right: 72vw;
+    }
+
+    @media only screen and (min-width: $bp-mb-pro) {
+      top: 10.5rem;
+      left: -29rem;
+    }
+    @media only screen and (min-width: $bp-bigger-laptop) {
+      top: 12.9rem;
+      left: -26rem;
+    }
+  }
+
+  @media only screen and (min-width: $bp-tab) {
+    grid-template-columns: 8.47fr 5fr;
+    gap: 0;
+    padding-top: 14.1rem;
+    text-align: left;
+  }
+
+  @media only screen and (min-width: $bp-tabbb) {
+    grid-template-columns: 8fr 5fr;
+  }
+  @media only screen and (min-width: $bp-spro) {
+    grid-template-columns: 9fr 4fr;
+  }
+  @media only screen and (min-width: $bp-ipad-pro) {
+    grid-template-columns: 7fr 4fr;
+    padding-bottom: 11.4rem;
+  }
+
+  @media only screen and (min-width: $bp-mb-pro) {
+    padding-top: 17.6rem;
+    padding-bottom: 10.222rem;
+  }
+
+  @media only screen and (min-width: $bp-bigger-laptop) {
+    padding-top: 19.8rem;
+    padding-bottom: 11.5rem;
+  }
+}
+
+.hero {
+  &__pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      @media only screen and (min-width: $bp-tab) {
+        content: url(../assets/images/pattern-circle.svg);
+        position: absolute;
+        bottom: 0;
+        left: 88vw;
+        z-index: 1;
+        height: 12.9rem;
+      }
+      @media only screen and (min-width: $bp-ipad-pro) {
+        bottom: 7rem;
+        left: 50vw;
+      }
+
+      @media only screen and (min-width: $bp-mb-pro) {
+        bottom: 6.22rem;
+        left: 64rem;
+      }
+      @media only screen and (min-width: $bp-bigger-laptop) {
+        bottom: 7rem;
+        left: 59.7rem;
+      }
+    }
+  }
+
+  &__img {
+    width: 63.73%;
+    z-index: 1;
+    position: relative;
+
+    @media only screen and (min-width: $bp-iphone-se) {
+      width: 50.73%;
+    }
+
+    @media only screen and (min-width: $bp-tab) {
+      width: 45.45%;
+      position: absolute;
+      top: 0;
+      right: -3.1rem;
+      z-index: 0;
+    }
+
+    @media only screen and (min-width: $bp-tabb) {
+      width: 45%;
+      right: -3rem;
+    }
+
+    @media only screen and (min-width: $bp-tabbb) {
+      width: 43%;
+    }
+
+    @media only screen and (min-width: $bp-tabbb-pro) {
+      width: 42.4%;
+    }
+    @media only screen and (min-width: $bp-tabbb-prop) {
+      width: 41.7%;
+    }
+    @media only screen and (min-width: $bp-spro) {
+      width: 37.9%;
+    }
+    @media only screen and (min-width: $bp-ipad-pro) {
+      right: 0;
+      width: 40.091%;
+    }
+
+    @media only screen and (min-width: $bp-mb-pro) {
+      width: 36.4%;
+    }
+
+    @media only screen and (min-width: $bp-bigger-laptop) {
+      width: auto;
+      max-width: 40.09%;
+    }
+  }
+
+  &__text-box {
+    @media only screen and (min-width: $bp-tab) {
+      grid-column: 1 / 2;
+      grid-row: 1;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__text {
+    margin-bottom: 2.4rem;
+
+    @media only screen and (min-width: $bp-tabbb) {
+      padding-right: 3rem;
+    }
+
+    @media only screen and (min-width: $bp-spro) {
+      padding-right: 14rem;
+    }
+    @media only screen and (min-width: $bp-ipad-pro) {
+      margin-bottom: 5.732rem;
+      padding-right: 16rem;
+    }
+    @media only screen and (min-width: $bp-mb-pro) {
+      margin-bottom: 5.866rem;
+      padding-right: 26rem;
+    }
+    @media only screen and (min-width: $bp-bigger-laptop) {
+      margin-bottom: 6.5rem;
+    }
+  }
+}
+
+.section-experience {
+  padding: 4rem 0;
+  border-top: 1px solid $clr-white;
+  border-bottom: 1px solid $clr-white;
+  // text-align: center;
+  display: grid;
+  row-gap: 2.4rem;
+
+  position: relative;
+
+  @media only screen and (min-width: $bp-tab) {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+    column-gap: 1.8rem;
+    row-gap: 5.2rem;
+
+    padding: 5.2rem 0 0;
+    margin-bottom: 2rem;
+    border-bottom: none;
+  }
+  @media only screen and (min-width: $bp-ipad-pro) {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 5.8rem;
+    padding: 7.3rem 0 0;
+  }
+
+  @media only screen and (min-width: $bp-mb-pro) {
+    column-gap: 3.75rem;
+    margin-bottom: 3.2rem;
+  }
+  @media only screen and (min-width: $bp-bigger-laptop) {
+    margin-bottom: 3.6rem;
+  }
+
+  &::before {
+    position: absolute;
+    // z-index: -1;
+    content: url(../assets/images/pattern-rings.svg);
+    bottom: 0;
+    left: 50vw;
+    transform: translateY(50%);
+
+    @media only screen and (min-width: $bp-tab) {
+      left: 72vw;
+    }
+    @media only screen and (min-width: $bp-ipad-pro) {
+      left: 83vw;
+    }
+    @media only screen and (min-width: $bp-mb-pro) {
+      left: 97.9rem;
+      bottom: 1rem;
+    }
+  }
+}
+
+.experience {
+  &__text-box {
+    @media only screen and (min-width: $bp-ipad-pro) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.21rem;
+    }
+
+    @media only screen and (min-width: $bp-mb-pro) {
+      gap: 1.4rem;
+    }
+  }
+}
+
+.section-projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 6rem;
+
+  @media only screen and (min-width: $bp-iphone-se) {
+    row-gap: 4rem;
+  }
+
+  @media only screen and (min-width: $bp-ipad-pro) {
+    row-gap: 6.918rem;
+  }
+  @media only screen and (min-width: $bp-mb-pro) {
+    row-gap: 7.111rem;
+  }
+  @media only screen and (min-width: $bp-bigger-laptop) {
+    row-gap: 8rem;
+  }
+}
+
+.projects {
+  &__title-box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (min-width: $bp-iphone-se) {
+      flex-direction: row;
+    }
+  }
+
+  &__boxes {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 6rem;
+
+    @media only screen and (min-width: $bp-iphone-se) {
+      row-gap: 4rem;
+    }
+
+    @media only screen and (min-width: $bp-tab) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 2.4rem;
+      row-gap: 6rem;
+    }
+    @media only screen and (min-width: $bp-mb-pro) {
+      column-gap: 2.666rem;
+      row-gap: 6.133rem;
+    }
+    @media only screen and (min-width: $bp-bigger-laptop) {
+      column-gap: 3rem;
+      row-gap: 6.9rem;
+    }
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+
+    @media only screen and (min-width: $bp-mb-pro) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__pic-box {
+    @media only screen and (min-width: $bp-mb-pro) {
+      position: relative;
+
+      &:hover .projects__overlay {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__pic {
+  }
+
+  &__overlay {
+    display: none;
+
+    @media only screen and (min-width: $bp-mb-pro) {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4.8rem;
+
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $clr-deep-black;
+      cursor: pointer;
+
+      opacity: 0;
+      visibility: hidden;
+      @include transition;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  &__project-title {
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  &__languages {
+    gap: 1.8rem;
+    list-style: none;
+  }
+
+  &__language {
+    font-size: 1.8rem;
+    line-height: 1.56;
+    text-transform: uppercase;
+  }
+
+  &__links {
+    gap: 3rem;
+
+    @media only screen and (min-width: $bp-mb-pro) {
+      display: none;
+    }
+  }
+}

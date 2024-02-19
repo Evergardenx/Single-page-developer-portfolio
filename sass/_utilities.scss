@@ -1,0 +1,44 @@
+// UTILITIES
+
+.center-text {
+  text-align: center;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+  width: fit-content;
+
+  @media only screen and (min-width: $bp-iphone-se) {
+    flex-direction: row;
+  }
+}
+
+.sm-y-padding {
+  // padding: 0 1.6rem 0.1rem 2.4rem;
+  padding-bottom: 0.1rem !important;
+}
+
+.invisible {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.d-none {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
